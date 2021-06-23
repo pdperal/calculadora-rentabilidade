@@ -1,13 +1,13 @@
 <template>
   <div class="investimento-field">
     <p> Informe o investimento inicial: </p>
-    <input placeholder="Investimento inicial">
+    <input type="text" onfocus="this.placeholder=''" onblur="this.placeholder='R$ 1.500,00'" placeholder="R$ 1.500,00">
   </div>
 </template>
 
 <script>
 export default {
-  name: "Field",
+  name: "Investimento",
 }
 </script>
 <style scoped>
@@ -24,20 +24,27 @@ export default {
     background-color: white;
   }
    input {  
-    border-radius: 3px;
+    border-radius: 5px;
     border: 1px solid #e3e3e3;
     float: left;
-    margin: 10px;
+    margin: 15px 0px 0px 0px;
     padding: 10px;
     width: 190px;
-    top: 100px;
-    height: 10px;
+    height: 10px;    
+    /* -webkit-transition: 0.3s; */
+    transition: 0.3s;
+    outline: none;
   }   
+  input:focus {
+  border: 1px solid black;
+}
+
   p {
     text-align: left;
     margin: 0px;
-    padding: 10px;
+    padding: 0px 0px 14px 0px;
     display: flex;
     height: 10px;
+    border-bottom: 0.100rem solid #ebebeb;
   }   
 </style>
