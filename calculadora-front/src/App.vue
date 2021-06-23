@@ -1,17 +1,37 @@
 <template>
-  <div>
-    <Field/>
-    <img alt="Vue logo" src="./assets/logo.png">
+  <div class="mydiv">
+    <p> teste </p>
+    <InvestimentoInicial/>
+    <Rentabilidade/>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <p> teste </p>
+    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
   </div>  
 </template>
 
 <script>
-import Field from  './components/InvestimentoField.vue'
+import InvestimentoInicial from  './components/InvestimentoField.vue'
+import Rentabilidade from  './components/Rentabilidade.vue'
 
 export default {
   name: 'App',
   components: {
-    Field
+    InvestimentoInicial,
+    Rentabilidade
   }
 }
 </script>
@@ -23,6 +43,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   background-color: #eedfcc;
-  /* margin-top: 60px; */
 }
 </style>
