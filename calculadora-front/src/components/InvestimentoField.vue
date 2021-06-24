@@ -1,13 +1,32 @@
 <template>
   <div class="investimento-field">
     <p> Informe o investimento inicial: </p>
-    <input type="text" onfocus="this.placeholder=''" onblur="this.placeholder='R$ 1.500,00'" placeholder="R$ 1.500,00">
+    <input 
+     v-money="money"
+         onfocus="this.placeholder=''" 
+         onblur="this.placeholder='R$ 1.500,00'" 
+         placeholder="R$ 1.500,00">
   </div>
 </template>
 
 <script>
+import {VMoney} from 'v-money'
+
 export default {
   name: "Investimento",
+  data () {
+      return {
+        money: {
+          decimal: ',',
+          thousands: '.',
+          prefix: 'R$ ',
+          suffix: '',
+          precision: 2,
+          masked: false
+        }
+      }
+    },
+  directives: {money: VMoney}
 }
 </script>
 <style scoped>
